@@ -111,65 +111,74 @@ Option list:
 |                              | Useage :                              |
 |                              |  template_defaults:"Eigen::Ref|1,0,0" |
 +------------------------------+---------------------------------------+
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
+|  use_cxx_14                  | Toggle cxx14 compiler dependent       |
+|                              | features such as ``make_unique`` or   |
+|                              | ``make_shared``. Default is true      |
+|                              | Can be disabled if only cxx11         |
+|                              | features are available                |
 |                              |                                       |
 |                              +---------------------------------------+
+|                              | Useage:                               |
+|                              |   use_cxx_14: True                    |
++------------------------------+---------------------------------------+
+| pass_eigen_by_ref            | Eigen types are passed to/from C++    |
+|                              | via potentially expensive copy        |
+|                              | operations. PyBind11 supports         |
+|                              | Eigen::Ref semantics to facilitate    |
+|                              | passing Eigen types by thin reference |
+|                              | Default is True                       |
 |                              |                                       |
+|                              +---------------------------------------+
+|                              | Useage:                               |
+|                              |   pass_eigen_by_ref: False            |
++------------------------------+---------------------------------------+
+| use_eigen_return_policy      |  PyBind11 has the concept of return   |
+|                              |  policies that dictate how objects    |
+|                              |  return to Python are handled. Eigen  |
+|                              |  types returned by l-value ref are    |
+|                              |  copied. Enabling this option ensures |
+|                              |  return values are referenced instead |
+|                              |  Default:  True                       |
 |                              |                                       |
+|                              +---------------------------------------+
+|                              | Useage:                               |
+|                              |    use_eigen_return_policy: True      |
 |                              |                                       |
 +------------------------------+---------------------------------------+
+| compiler_opts                | AutoPyBind11 uses LLVM-Clang via      |
+|                              | CastXML to compile C++ files before   |
+|                              | generating the binding code. Specify  |
+|                              | arguments to pass to the compiler     |
 |                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
+|                              | Default: None                         |
 |                              |                                       |
 |                              +---------------------------------------+
-|                              |                                       |
-|                              |                                       |
+|                              | Useage:                               |
+|                              |   compiler_opts: -Werror -Wunintialize|
 |                              |                                       |
 +------------------------------+---------------------------------------+
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
+|  print_python_warnings       | AutoPyBind11 uses Pygccxml under the  |
+|                              | hood. This option supresses warnings  |
+|                              | raised by pygccxml                    |
+|                              | Default: True                         |
 |                              |                                       |
 |                              |                                       |
 |                              |                                       |
 |                              +---------------------------------------+
-|                              |                                       |
-|                              |                                       |
+|                              | Useage:                               |
+|                              |    print_python_warnings: False       |
 |                              |                                       |
 +------------------------------+---------------------------------------+
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              +---------------------------------------+
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-+------------------------------+---------------------------------------+
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
+|  no_format                   | AutoPyBind11 leverages clang-format   |
+|                              | to format the output files containing |
+|                              | the binding code. This option disables|
+|                              | or enables the use of clang-format    |
+|                              | Default: False                        |
 |                              |                                       |
 |                              |                                       |
 |                              +---------------------------------------+
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
+|                              | Useage:                               |
+|                              |    no_format: True                    |
 +------------------------------+---------------------------------------+
 |                              |                                       |
 |                              |                                       |
