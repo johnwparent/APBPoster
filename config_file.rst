@@ -1,0 +1,190 @@
+Configuring AutoPyBind11
+========================
+
+AutoPyBind11 has a number of configurable options, settings, and binding code blocks that can be set/changed by a user via configuration.
+
+The user has two options for specifiying these settings, either via the CLI, or via a configuration file using `Yaml`_ syntax(recommended).
+
+
+The __useage__ section lists the number of CL options provided by AutoPyBind11 to configure the tool's function, and they range from toggling features
+to specifying code blocks to use for specific components of the binding code. This section will cover each option for configuring AutoPyBind11, it's options, and
+the variying methods for specifiying each option.
+
+
+
+When specifiying options via the CL, the options can be set as you would a typical CL option for a Python program, however, there are many options and a number of these options are long, multi-line strings
+neither of which allow for a clean, manageable CLI exeperience. The Yaml file approach is the recommended approach for specifying a number of these options.
+
+The configuration yaml file itself is an optional CL option, and as mentioned in the useage section, options can be specified in both the config file and the CL, but CL options will
+overwrite whatever is specified by the YAML. If an option is specified by the config file, it does not need to be included in the CLI and vice versa. If the CMake interface is chosen, then the
+CLI cannot be used at all, and in order to configure AutoPyBind11, the ``CONFIG_INPUT`` argument to the ``autopybind11_add_module`` command must be provided the location of a config file.
+
+
+Option list:
+
++------------------------------+---------------------------------------+
+|     Options                  | Useage and Meaning                    |
++==============================+=======================================+
+| enforce_namespace_structure  | ``false`` to place all found          |
+|                              |   objects at the module level         |
+|                              | ``true`` will enforce the             |
+|                              |   C++ namespace structure on the      |
+|                              |   Python Code                         |
+|                              +---------------------------------------+
+|                              | Useage :                              |
+|                              | enforce_namespace_structure: true     |
++------------------------------+---------------------------------------+
+| private_members_as_fields    | ``False`` to bind getters and         |
+|                              | setters as normal.                    |
+|                              | ``True`` to bind                      |
+|                              | the corresponding private member      |
+|                              | variables as public members           |
+|                              |                                       |
+|                              | See `Pybind11's Documentation`_       |
+|                              |                                       |
+|                              +---------------------------------------+
+|                              | Useage :                              |
+|                              |     private_members_as_fields: true   |
+|                              |                                       |
++------------------------------+---------------------------------------+
+| enable_doc_strings           | ``False`` to not supply doc           |
+|                              | strings from the C++ code             |
+|                              | ``True`` to pass C++ comments         |
+|                              | from the source code as doc           |
+|                              | strings to the Python code            |
+|                              |                                       |
+|                              |                                       |
+|                              +---------------------------------------+
+|                              | Useage :                              |
+|                              |    enable_doc_strings: false          |
+|                              |                                       |
++------------------------------+---------------------------------------+
+| expand_declarations          | ``False`` to limit output of          |
+|                              | binding code to as minimally          |
+|                              | verbose output as possible            |
+|                              | ``True`` (default) to produce         |
+|                              | binding code with declarations        |
+|                              | fully expanded by compiler            |
+|                              +---------------------------------------+
+|                              | Useage :                              |
+|                              |    expand_declarations: False         |
++------------------------------+---------------------------------------+
+| expand_stl_declarations      | ``False`` to reduce binding code      |
+|                              | of stl declarations to minimal        |
+|                              | verbosity, removing any expansion     |
+|                              | of default params                     |
+|                              | ``True`` to allow stl default         |
+|                              | and fully expanded declarations       |
+|                              | in binding code                       |
+|                              |                                       |
+|                              +---------------------------------------+
+|                              | Useage :                              |
+|                              |  expand_stl_declarations: False       |
++------------------------------+---------------------------------------+
+| apply_global_namespace       | ``False`` to remove all instances     |
+|                              | of the global namespace qualifier     |
+|                              | ``True`` to allow the GNS to          |
+|                              | persist                               |
+|                              +---------------------------------------+
+|                              | Useage :                              |
+|                              |  apply_global_namespace: False        |
++------------------------------+---------------------------------------+
+| assumed_qualifiers           | Default is an empty list.             |
+|                              | Add scoping qualifier to list to      |
+|                              | remove qualifier(including GNS)       |
+|                              | from the binding output               |
+|                              +---------------------------------------+
+|                              | Useage :                              |
+|                              |   assumed_qualifiers: ["First"]       |
++------------------------------+---------------------------------------+
+| template_defaults            | Default is an empty list              |
+|                              | Each entry in list specifies a        |
+|                              | templated type with default           |
+|                              | parameters and for each template      |
+|                              | parameter a value of 1 or 0           |
+|                              | indicating whether or not that        |
+|                              | param will be included in the         |
+|                              | binding output. References to         |
+|                              | params are done in order and all      |
+|                              | parameters must be specified.         |
+|                              +---------------------------------------+
+|                              | Useage :                              |
+|                              |  template_defaults:"Eigen::Ref|1,0,0" |
++------------------------------+---------------------------------------+
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              +---------------------------------------+
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
++------------------------------+---------------------------------------+
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              +---------------------------------------+
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
++------------------------------+---------------------------------------+
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              +---------------------------------------+
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
++------------------------------+---------------------------------------+
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              +---------------------------------------+
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
++------------------------------+---------------------------------------+
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              +---------------------------------------+
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
++------------------------------+---------------------------------------+
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
+|                              +---------------------------------------+
+|                              |                                       |
+|                              |                                       |
+|                              |                                       |
++------------------------------+---------------------------------------+
+
+
+
+.. _`Yaml`: https://yaml.org/
+.. _`PyBind11's Documentation`: https://pybind11.readthedocs.io/en/stable/
