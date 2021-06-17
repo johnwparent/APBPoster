@@ -16,7 +16,8 @@ The default behavior of AutoPyBind11 is to as closely mirror the C++ side as clo
 | and nested namespaces as submodules.            |
 +-------------------------+-----------------------+
 |                         |                       |
-|  ex.                    |Python module structure|
+|  ex.::                  |Python module structure|
+|                         |                       |
 |    namespace1{          | namespace1.namespace2 |
 |        namespace2{      |                       |
 |       }                 |                       |
