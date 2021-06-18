@@ -1,0 +1,9 @@
+files:
+  test_constants_and_functions:
+    functions:
+      test_function1:
+      test_function2:
+      test_function3:
+      test_function4:
+    enums:
+      MyEnum:

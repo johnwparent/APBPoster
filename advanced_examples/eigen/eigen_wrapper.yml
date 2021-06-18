@@ -1,0 +1,10 @@
+files:
+  eigen.hpp:
+    classes:
+      CustomOperatorNew:
+      ReturnTester:
+    functions:
+      reset_ref:
+      reset_refs:
+      get_elem:
+      adjust_matrix:

@@ -1,0 +1,16 @@
+files:
+  call_policy.hpp:
+    classes:
+      Child:
+      Parent:
+        customization:
+          keep_alive:
+            addChild:
+              num_arguments: [1]
+              pairings: [["1;2"]]
+            returnChild:
+              num_arguments: [0]
+              pairings: [["1;0"]]
+            returnNullChild:
+              num_arguments: [1]
+              pairings: [["0;1"]]

@@ -1,0 +1,11 @@
+files:
+  local_bindings.hpp:
+    namespaces:
+      pets:
+        classes:
+          Pet:
+            customization:
+              module_local
+    classes:
+      MixGL:
+      MixGl2:

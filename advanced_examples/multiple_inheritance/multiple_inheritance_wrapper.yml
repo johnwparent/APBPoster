@@ -1,0 +1,6 @@
+files:
+  multiple_inheritance.hpp:
+    classes:
+      Base1a:
+      Base2a:
+      Base12a:

@@ -1,0 +1,4 @@
+files:
+  operator_overloading.hpp:
+    classes:
+      Vector2:

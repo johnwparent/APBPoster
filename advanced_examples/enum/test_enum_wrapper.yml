@@ -1,0 +1,8 @@
+files:
+  test_enum.hpp:
+    enums:
+      UnscopedEnum:
+      ScopedEnum:
+      Flags:
+    classes:
+      ClassWithUnscopedEnum:

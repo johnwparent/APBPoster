@@ -1,0 +1,4 @@
+files:
+  virtual.hpp:
+    classes:
+      ExampleVirt:

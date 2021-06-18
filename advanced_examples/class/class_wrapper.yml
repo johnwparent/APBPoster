@@ -1,0 +1,8 @@
+files:
+  class.hpp:
+    classes:
+      Pet:
+      Dog:
+      Rabbit:
+      Hamster:
+      Chimera:
