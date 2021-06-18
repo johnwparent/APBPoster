@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.15)
+
+find_package(AutoPyBind11)
+
+autopybind_fetch_build_pybind11()
+
+
+@LIBRARY_BUILDER@
+
+autopybind_add_module(@MOD_NAME@
+                       YAML_INPUT @YAML_DEST@
+                       CONFIG_INPUT @CONFIG@
+                       DESTINATION @DEST@
+                       LINK_LIBRARIES @LINK_LIBRARIES@
+                    )
