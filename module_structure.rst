@@ -1,3 +1,5 @@
+.. _module structure:
+
 Python Module Structure
 =======================
 
@@ -35,12 +37,16 @@ The default behavior of AutoPyBind11 is to as closely mirror the C++ side as clo
 +-------------------------------------------------+
 
 
-Classes, their methods, and free functions are qualified by name/module scope much as they are in C++, i.e. a Class within a module would need to be referenced by::
+Classes, their methods, and free functions are qualified by name/module scope much as they are in C++, i.e. a Class within a module would need to be referenced By
+
+.. code-block:: python
 
     import namespace1
     namespace1.classname
 
-or::
+or
+
+.. code-block:: python
 
     from namespace1 import classname
     classname.method() # or classname.attribute
@@ -53,7 +59,9 @@ To inform AutoPyBind11 of this, the descriptor wrapper yaml file must be amended
 To specify an altered Python side module structure, the user has the option to dictate a purely unique Python side structure, or to retain the basic structure of the C++ code base, with a few, explicitly declared departures.
 To toggle this behavior, the CLI or config argument ``enforce_namespace_structure`` will need to be specified as ``True`` or ``False`` depending on whether a general C++ structure should be retained.
 
-Once that argument is declared (It's default is ``True``) in order to reassign the scope of a declared component to be bound, in the Customization field, the namespace field must be declared as such::
+Once that argument is declared (It's default is ``True``) in order to reassign the scope of a declared component to be bound, in the Customization field, the namespace field must be declared as such
+
+.. parsed-literal::
 
     classes:
         classname:

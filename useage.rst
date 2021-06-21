@@ -1,3 +1,4 @@
+.. _Useage:
 AutoPyBind11 Useage
 ===================
 
@@ -12,9 +13,13 @@ to rely on the direct use of the API.
 AutoPyBind11 does however, expose a rich CLI to drive the binding generation.
 Running
 
-``python3 -m autopybind11 -h``
+.. code-block:: python
 
-after installation will bring up the list of CL options, and the associated manner in which they should be specified::
+    python3 -m autopybind11 -h
+
+after installation will bring up the list of CL options, and the associated manner in which they should be specified
+
+.. code-block:: python
 
 
     usage: __main__.py [-h] [-o OUTPUT_DIR] -y YAML_PATH --module_name MODULE_NAME

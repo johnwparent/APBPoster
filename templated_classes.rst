@@ -17,7 +17,7 @@ name, a lambda defines functionally the custom name and schema for indicating
 type and location of type indicator.
 
 A good example of this for classes with single and double template parameters
-can be found at ``example/custom_names/wrapper_input.yaml``.
+can be found at ``tests/custom_names/wrapper_input.yaml`` in the AutoPyBind11 repository.
 
 In order to have your lambda read by the yaml parser it must be defined
 in ``wrapper_input.yml`` in the form:
@@ -33,7 +33,7 @@ The only requirements for this list is that there must be an equal number of
 custom names to the number of type instatiations desired. If there is not, some
 classes may not end up being wrapped.
 
-Notes on Templates:
+Notes on Templates
 %%%%%%%%%%%%%%%%%%%
 The argument a custom naming lambda accepts is a Python list consisting of
 strings listing each type parameter in a template.

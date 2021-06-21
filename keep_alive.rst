@@ -1,5 +1,7 @@
+.. _keep_alive:
+
 keep_alive
-^^^^^^^^^^
+##########
 
 For all objects, the keep_alive customization is a dictionary with pairs of
 lists to describe the additions. Each object should have the name of the
@@ -14,7 +16,9 @@ strings which corresponds directly to the number of arguments found in the
 same index.
 This string should contain the two reference values separated by a semicolon.
 
-For example::
+For example
+
+.. parsed-literal::
 
   customization:
     keep_alive:

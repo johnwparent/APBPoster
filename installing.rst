@@ -22,7 +22,9 @@ AutoPyBind11 into a new or existing CMake project, who chose to manage the depen
 
 CMake provides `External Project`_, a utility that exposes the ability to manage the installation of an external project at build time.
 Alternatively, for a configure time option, the `FetchContent`_ module can be utilized. After specifying either of those commands correctly in CMake, AutoPyBind11 can be loaded into the project
-via ``find_package`` without issue. When AutoPyBind11 has been loaded into the project, it can be installed via::
+via ``find_package`` without issue. When AutoPyBind11 has been loaded into the project, it can be installed via
+
+.. code-block:: CMake
 
 
     execute_process(

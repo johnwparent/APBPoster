@@ -6,7 +6,7 @@ AutoPyBind11 has a number of configurable options, settings, and binding code bl
 The user has two options for specifiying these settings, either via the CLI, or via a configuration file using `Yaml`_ syntax(recommended).
 
 
-The __useage__ section lists the number of CL options provided by AutoPyBind11 to configure the tool's function, and they range from toggling features
+The `Useage`_ section lists the number of CL options provided by AutoPyBind11 to configure the tool's function, and they range from toggling features
 to specifying code blocks to use for specific components of the binding code. This section will cover each option for configuring AutoPyBind11, it's options, and
 the variying methods for specifiying each option.
 
@@ -25,11 +25,11 @@ Option list:
 +------------------------------+---------------------------------------+
 |     Options                  | Useage and Meaning                    |
 +==============================+=======================================+
-| enforce_namespace_structure  | ``false`` to place all found          |
-|                              |   objects at the module level         |
-|                              | ``true`` will enforce the             |
+| enforce_namespace_structure  | ``False`` to place all found          |
+|                              |   objects at the module level.        |
+|                              | ``True`` will enforce the             |
 |                              |   C++ namespace structure on the      |
-|                              |   Python Code                         |
+|                              |   Python Code.                        |
 |                              +---------------------------------------+
 |                              | Useage :                              |
 |                              | enforce_namespace_structure: true     |
@@ -38,7 +38,7 @@ Option list:
 |                              | setters as normal.                    |
 |                              | ``True`` to bind                      |
 |                              | the corresponding private member      |
-|                              | variables as public members           |
+|                              | variables as public members.          |
 |                              |                                       |
 |                              | See `Pybind11's Documentation`_       |
 |                              |                                       |
@@ -51,7 +51,7 @@ Option list:
 |                              | strings from the C++ code             |
 |                              | ``True`` to pass C++ comments         |
 |                              | from the source code as doc           |
-|                              | strings to the Python code            |
+|                              | strings to the Python code.           |
 |                              |                                       |
 |                              |                                       |
 |                              +---------------------------------------+
@@ -61,10 +61,10 @@ Option list:
 +------------------------------+---------------------------------------+
 | expand_declarations          | ``False`` to limit output of          |
 |                              | binding code to as minimally          |
-|                              | verbose output as possible            |
+|                              | verbose output as possible,           |
 |                              | ``True`` (default) to produce         |
 |                              | binding code with declarations        |
-|                              | fully expanded by compiler            |
+|                              | fully expanded by compiler.           |
 |                              +---------------------------------------+
 |                              | Useage :                              |
 |                              |    expand_declarations: False         |
@@ -75,7 +75,7 @@ Option list:
 |                              | of default params                     |
 |                              | ``True`` to allow stl default         |
 |                              | and fully expanded declarations       |
-|                              | in binding code                       |
+|                              | in binding code.                      |
 |                              |                                       |
 |                              +---------------------------------------+
 |                              | Useage :                              |
@@ -84,7 +84,7 @@ Option list:
 | apply_global_namespace       | ``False`` to remove all instances     |
 |                              | of the global namespace qualifier     |
 |                              | ``True`` to allow the GNS to          |
-|                              | persist                               |
+|                              | persist.                              |
 |                              +---------------------------------------+
 |                              | Useage :                              |
 |                              |  apply_global_namespace: False        |
@@ -92,7 +92,7 @@ Option list:
 | assumed_qualifiers           | Default is an empty list.             |
 |                              | Add scoping qualifier to list to      |
 |                              | remove qualifier(including GNS)       |
-|                              | from the binding output               |
+|                              | from the binding output.              |
 |                              +---------------------------------------+
 |                              | Useage :                              |
 |                              |   assumed_qualifiers: ["First"]       |
@@ -115,7 +115,7 @@ Option list:
 |                              | features such as ``make_unique`` or   |
 |                              | ``make_shared``. Default is true      |
 |                              | Can be disabled if only cxx11         |
-|                              | features are available                |
+|                              | features are available.               |
 |                              |                                       |
 |                              +---------------------------------------+
 |                              | Useage:                               |
@@ -125,7 +125,7 @@ Option list:
 |                              | via potentially expensive copy        |
 |                              | operations. PyBind11 supports         |
 |                              | Eigen::Ref semantics to facilitate    |
-|                              | passing Eigen types by thin reference |
+|                              | passing Eigen types by thin reference.|
 |                              | Default is True                       |
 |                              |                                       |
 |                              +---------------------------------------+
@@ -137,7 +137,7 @@ Option list:
 |                              |  return to Python are handled. Eigen  |
 |                              |  types returned by l-value ref are    |
 |                              |  copied. Enabling this option ensures |
-|                              |  return values are referenced instead |
+|                              |  return values are referenced instead.|
 |                              |  Default:  True                       |
 |                              |                                       |
 |                              +---------------------------------------+
@@ -148,7 +148,7 @@ Option list:
 | compiler_opts                | AutoPyBind11 uses LLVM-Clang via      |
 |                              | CastXML to compile C++ files before   |
 |                              | generating the binding code. Specify  |
-|                              | arguments to pass to the compiler     |
+|                              | arguments to pass to the compiler.    |
 |                              |                                       |
 |                              | Default: None                         |
 |                              |                                       |
@@ -159,7 +159,7 @@ Option list:
 +------------------------------+---------------------------------------+
 |  print_python_warnings       | AutoPyBind11 uses Pygccxml under the  |
 |                              | hood. This option supresses warnings  |
-|                              | raised by pygccxml                    |
+|                              | raised by pygccxml.                   |
 |                              | Default: True                         |
 |                              |                                       |
 |                              |                                       |
@@ -172,7 +172,7 @@ Option list:
 |  no_format                   | AutoPyBind11 leverages clang-format   |
 |                              | to format the output files containing |
 |                              | the binding code. This option disables|
-|                              | or enables the use of clang-format    |
+|                              | or enables the use of clang-format.   |
 |                              | Default: False                        |
 |                              |                                       |
 |                              |                                       |
@@ -180,20 +180,6 @@ Option list:
 |                              | Useage:                               |
 |                              |    no_format: True                    |
 +------------------------------+---------------------------------------+
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-|                              +---------------------------------------+
-|                              |                                       |
-|                              |                                       |
-|                              |                                       |
-+------------------------------+---------------------------------------+
-
-
 
 .. _`Yaml`: https://yaml.org/
-.. _`PyBind11's Documentation`: https://pybind11.readthedocs.io/en/stable/
+.. _`PyBind11's Documentation`: https://pybind11.readthedocs.io/en/stable/classes.html#instance-and-static-fields

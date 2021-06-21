@@ -1,7 +1,12 @@
-AutoPyBind11
-############
+.. AutoPyBind11 documentation master file, created by
+   sphinx-quickstart on Mon Jun 21 00:33:31 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
 
-A C++ to Python interoperability convenience tool. 
+Welcome to AutoPyBind11's documentation!
+========================================
+
+A C++ to Python interoperability convenience tool.
 
 
 AutoPyBind11 is a lightweight python based tool designed to simplify the process of generating and maintaining Python bindings for C++.
@@ -20,16 +25,30 @@ AutoPyBind11 is an active and ongoing effort, and as of the writing of this docu
 AutoPyBind11 provides as close to a complete coverage of PyBind11's features as is possible, and more covereage is being added consistently.
 
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Get Started:
 
-AutoPyBind11 Core Features:
+   installing
+   useage
+   wrapper_yaml
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Advanced:
+
+   config_file
+   customization
+   compiler_options
+   templated_classes
 
 
+Indices and tables
+==================
 
-
-
-
-AutoPyBind11 Installing and Getting Started:
-
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
 
 
 

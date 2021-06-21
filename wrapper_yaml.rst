@@ -1,4 +1,4 @@
-The Descriptor File:
+The Descriptor File
 ====================
 
 AutoPyBind11's interface is largely encompassed by a single `Yaml`_ file that describes that C++ code to be exposed as a Python module.
@@ -102,7 +102,7 @@ Each type of object within the reserved tags requires different pieces of inform
 +-----------------------------+---------------------------------+
 
 An "empty" object, for example, the `simple` class or the enumeration `test`
-in the following example are treated as non-templated objects::
+in the following example is treated as non-templated objects to be bound::
 
   classes:
     simple:

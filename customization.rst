@@ -9,7 +9,9 @@ Object Customization
 
 Each C++ object also has an optional ``customization`` field. This allows for
 additional customization of the Python object generated. For example, to
-customize the Python name of a C++ class, the ``name`` sub-field can be used::
+customize the Python name of a C++ class, the ``name`` sub-field can be used
+
+.. parsed-literal::
 
   classes:
     Foo:
@@ -21,7 +23,9 @@ The above would name the C++ class ``Foo`` as ``Foobar`` on the Python side.
 
 If generating a python package that may have naming conflicts with another
 package, the ``module local`` option can be turned on.  This is done simply
-by specifying the ``module_local`` field in ``customization`` i.e. ::
+by specifying the ``module_local`` field in ``customization`` i.e.
+
+.. parsed-literal::
 
   classes:
     Foo:
@@ -47,7 +51,7 @@ For the total list of what can be customized, see the following table:
 |        keep_alive           | Adds ``py::keep_alive`` to the  |
 |                             | PyBind11 code for the object    |
 |                             |                                 |
-|                             | See keep_alive section below    |
+|                             | See :ref:`keep_alive`           |
 |                             | for more information            |
 +-----------------------------+---------------------------------+
 |        name                 | A string to denote the class    |
@@ -85,9 +89,9 @@ For the total list of what can be customized, see the following table:
 |                             |      export_enum_vals           |
 +-----------------------------+---------------------------------+
 | All Enum Customization                                        |
-+---------------------------------------------------------------+
+|                                                               |
 | In addition to the above syntax, enum cuztomization can all   |
-| be specified under the same field names ``enums``             |
+| be specified under the same field name ``enums``              |
 |                                                               |
 +-----------------------------+---------------------------------+
 |         skiplist            | Members to be excluded          |
@@ -122,7 +126,8 @@ For the total list of what can be customized, see the following table:
 +-----------------------------+---------------------------------+
 |      pass_by_ref            | Enable pass by reference for    |
 |                             | Python immutable types          |
-|                             |                                 |
+|                             | Further reference found at      |
+|                             | :ref:`pass_by_ref`              |
 |                             +---------------------------------+
 |                             | Example:                        |
 |                             |     customization:              |
@@ -133,7 +138,7 @@ For the total list of what can be customized, see the following table:
 |                             | an object should belong to      |
 |                             |                                 |
 |                             | More more info and examples     |
-|                             | refer to module_structure       |
+|                             | refer to the module_structure   |
 |                             | section                         |
 +-----------------------------+---------------------------------+
 |    method_inst              | Handles the instantiating of    |
@@ -149,4 +154,11 @@ For the total list of what can be customized, see the following table:
 |                             |                                 |
 |                             |                                 |
 +-----------------------------+---------------------------------+
+
+Module Structure
+%%%%%%%%%%%%%%%%
+
+The actual structure of the produced Python module can actually be defined and reconfigured by AutoPyBind11 based on values set in the wrapper input file.
+
+Further details on this process can be found in the :ref:`module structure` section.
 

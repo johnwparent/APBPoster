@@ -1,5 +1,7 @@
+.. _pass_by_ref:
+
 pass_by_ref
-^^^^^^^^^^^
+###########
 
 Often in C++, for a multitude of reasons, variables are passed by reference. This is largely supported
 by pybind11 and Autopybind11, however, certain Python types such as `int` and `string` are immutable
