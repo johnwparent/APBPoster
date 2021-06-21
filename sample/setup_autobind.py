@@ -13,8 +13,32 @@ def generate_descriptors(wrapper, config):
         with open("sample_conf.yml","w") as cnf_yml:
             yaml.dump(yaml.load(config),cnf_yml)
 
-def configure_cmakelists():
-    pass
+def cmake_variables(**kwargs):
+    vars = []
+    for arg in kwargs:
+        vars.append("-D{}={}".format(arg,kwargs[arg]))
+    return vars
+
+def cmake_script_drive(script, args):
+    subprocess.call(["cmake","-P",script].extend(args))
+
+def configure_cmakelists(script_name,**kwargs):
+    vars = cmake_variables(kwargs)
+    cmake_script_drive(script_name,vars)
+
+def configure_sample_cmakelists(**kwargs):
+    configure_cmakelists(
+        "../Cmake/FormatListFile.cmake",
+        kwargs,
+        INPUT_FILE="./CMakeLists.txt.in",
+        YAML_IN="sample_wrapper.yml",
+        CONFIG="sample_conf.yml"
+    )
+
+def display_cmakelists(file):
+    with open(file,"r",encoding="utf8") as cmakelists:
+        for line in cmakelists:
+            print(line)
 
 def drive_cmake():
     subprocess.call(["cmake",".."])
