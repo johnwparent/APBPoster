@@ -115,7 +115,7 @@ in the following example is treated as non-templated objects to be bound::
 Further information can be specified in a Yaml file, but this represents a bare bones example, which should be sufficent to prototype a Python representation of a C++ module.
 
 In addition to the inst field that can be specified for templated types/functions, the wrapper supports a complex customization field that allows for fairly granular customization and
-and alteration of the generated binding code objects. The customization is documented further at: __customization__
+and alteration of the generated binding code objects. The customization is documented further at: :ref:`customization`
 
 
 

@@ -1,3 +1,4 @@
+.. _Customization:
 Customize Output
 #####################
 

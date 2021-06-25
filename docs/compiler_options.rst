@@ -3,7 +3,7 @@ Clang/LLVM Compiler Options
 
 AutoPyBind11, as mentioned above, uses CastXML to parse the C++ AST generated
 by provided C++ files. CastXML uses the Clang/LLVM compiler to accomplish this.
-As such, options that can be specified on the CLang/LLVM command line, can be forwarded
+As such, options that can be specified on the Clang/LLVM command line, can be forwarded
 to CastXML from AutoPybind11. To accomplish this the user has a few options.
 
 From CMake:
