@@ -1,5 +1,5 @@
 # AutoPyBind11
-
+![Kitware](docs/Kitware_Full_Logo.svg)
 
 [![Documentation Status](https://readthedocs.org/projects/autopybind11/badge/?version=latest)](https://autopybind11.readthedocs.io/en/latest/?badge=latest)
 
