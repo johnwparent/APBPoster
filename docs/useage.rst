@@ -225,4 +225,4 @@ More details can be found under the GEN_ONLY tab.
 In addition to generating instructions for the build time generation and compilation of the binding code, a CMake target is created, named after the provided module name, that can in turn
 be used to build other modules, or treated like any other CMake target.
 
-.. _`find_package`: https://cmake.org/cmake/help/v3.20/command/find_package.html
+.. _`find_package`: https://cmake.org/cmake/help/latest/command/find_package.html

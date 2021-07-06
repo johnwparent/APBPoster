@@ -6,7 +6,7 @@ from IPython.display import Markdown, display_markdown
 cpp_md = """```cpp\n{}\n```\n<hr>"""
 
 def render(code_dir):
-    for cpp_file in glob.glob(os.sep.join(code_dir,"*.cpp")):
+    for cpp_file in glob.glob(os.sep.join([code_dir,"*.cpp"])):
         with open(cpp_file, 'r') as code_file:
             code = code_file.readlines()
             cpp_file_name = os.path.basename(cpp_file)

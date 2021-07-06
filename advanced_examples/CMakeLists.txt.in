@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.15)
+
+project(@UP_NAME@ CXX)
+
+autopybind_fetch_build_pybind11(PYBIND11_DIR ${PYBIND11_DIR})
+
+add_library(@MOD_NAME@ INTERFACE)
+target_include_directories(@MOD_NAME@ INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+target_add_sources(@MOD_NAME@ INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/@MOD_NAME@.hpp)
+
+
+autopybind11_add_module(@MOD_NAME@MOD
+                        YAML_INPUT ${CMAKE_CURRENT_SOURCE_DIR}/@MOD_NAME@_wrapper.yml
+                        DESTINATION ${CMAKE_CURRENT_BINARY_DIR}
+                        LINK_LIBRARIES @MOD_NAME@)
+

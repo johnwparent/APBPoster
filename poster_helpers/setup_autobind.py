@@ -22,17 +22,17 @@ def cmake_variables(**kwargs):
 def cmake_script_drive(script, args):
     subprocess.call(["cmake","-P",script].extend(args))
 
-def configure_cmakelists(script_name,**kwargs):
-    vars = cmake_variables(kwargs)
-    cmake_script_drive(script_name,vars)
+def configure_cmakelists(script,**kwargs):
+    vars = cmake_variables(**kwargs)
+    cmake_script_drive(script,vars)
 
 def configure_sample_cmakelists(**kwargs):
     configure_cmakelists(
-        "../Cmake/FormatListFile.cmake",
-        kwargs,
+        "../CMake/FormatListFile.cmake",
+        **kwargs,
         INPUT_FILE="./CMakeLists.txt.in",
         YAML_IN="sample_wrapper.yml",
-        CONFIG="sample_conf.yml"
+        CONFIG="sample_conf.yml",
     )
 
 def display_cmakelists(file):
@@ -47,5 +47,5 @@ def drive_cmake():
 def visualize_binding_code(code_dir):
     pth = os.path.abspath("..")
     sys.path.append(pth)
-    from render_binding_code import render
+    from .render_binding_code import render
     render(code_dir)
