@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.15)
 
 project(APB-Example CXX)
 
-include("${CMAKE_SOURCE_DIR}/../CMake/GetAutoPyBind11.cmake")
+include("${CMAKE_SOURCE_DIR}/../CMake/GetAutoPybind11.cmake")
 
 add_library(example src/main.cpp)
 target_include_directories(example PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
