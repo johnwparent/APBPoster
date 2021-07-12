@@ -43,7 +43,13 @@ AutoPyBind11 provides as close to a complete coverage of PyBind11's features as 
    config_file
    customization
    compiler_options
+   keep_alive
+   module_structure
+   pass_by_ref
    templated_classes
+
+
+
 
 
 Indices and tables

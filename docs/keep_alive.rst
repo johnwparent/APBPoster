@@ -1,6 +1,5 @@
 .. _keep_alive:
-
-keep_alive
+Keep Alive
 ##########
 
 For all objects, the keep_alive customization is a dictionary with pairs of

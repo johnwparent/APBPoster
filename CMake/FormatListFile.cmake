@@ -1,11 +1,11 @@
-if(not ${INPUT_FILE})
+if(NOT DEFINED ${INPUT_FILE})
     message(FATAL "No input file specified, incorrect script useage."
                 "Correct useage requires -DINPUT_FILE be set.")
 endif()
 
-if(not ${OUTPUT_FILE})
-    message(WARNING "No output file specified, defaulting to CMakeLists.txt")
-    set(OUTPUT_FILE "CMakeLists.txt")
+if(DEFINED ${OUTPUT_FILE})
+    message(FATAL "No output file specified, incorrect script useage."
+                  "Correct useage requires -DOUTPUT_FILE be set.")
 endif()
 
 configure_file(${INPUT_FILE} ${OUTPUT_FILE} @ONLY)

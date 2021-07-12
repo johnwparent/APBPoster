@@ -6,7 +6,7 @@ AutoPyBind11 has a number of configurable options, settings, and binding code bl
 The user has two options for specifiying these settings, either via the CLI, or via a configuration file using `Yaml`_ syntax(recommended).
 
 
-The `Useage`_ section lists the number of CL options provided by AutoPyBind11 to configure the tool's function, and they range from toggling features
+The :ref:`Useage`_ section lists the number of CL options provided by AutoPyBind11 to configure the tool's function, and they range from toggling features
 to specifying code blocks to use for specific components of the binding code. This section will cover each option for configuring AutoPyBind11, it's options, and
 the variying methods for specifiying each option.
 

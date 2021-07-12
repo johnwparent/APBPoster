@@ -8,7 +8,11 @@ AutoPyBind11 is a heavily Python based utility, allowing for easy, straightforwa
 Installing via Python
 ---------------------
 
-AutoPyBind11 can be easily installed from PyPi via pip.
+AutoPyBind11 can be easily installed from TestPyPi via pip with the command
+
+..code_block:: shell
+
+    pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple autopybind11
 
 Alternatively, a more involved approach can be used when installing AutoPyBind11. To install AutoPyBind11, clone the `repo`_
 into a desired directory.
@@ -57,7 +61,7 @@ install the CMake files. It can be executed by
     autopybind11-cmake --dir <path to install>
 
 
-
+Note: elevate permission may be required to use this script to install to some system locations
 
 Requirements:
 #############

@@ -1,6 +1,5 @@
 .. _pass_by_ref:
-
-pass_by_ref
+Pass by Ref
 ###########
 
 Often in C++, for a multitude of reasons, variables are passed by reference. This is largely supported

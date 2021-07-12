@@ -20,7 +20,8 @@ def cmake_variables(**kwargs):
     return vars
 
 def cmake_script_drive(script, args):
-    subprocess.call(["cmake","-P",script].extend(args))
+    invoke_cmake = ["cmake", *args, "-P", script]
+    subprocess.call(invoke_cmake)
 
 def configure_cmakelists(script,**kwargs):
     vars = cmake_variables(**kwargs)
