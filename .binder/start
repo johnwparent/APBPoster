@@ -1,0 +1,5 @@
+#!/bin/bash
+export APB=~/kitware/autopybind11
+export PATH=~/kitware/cmake/bin:$PATH
+
+exec "$@"

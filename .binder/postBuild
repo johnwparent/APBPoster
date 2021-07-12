@@ -18,5 +18,3 @@ mkdir -p ~/kitware/autopybind11
 
 pip3 install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple autopybind11
 autopybind11-cmake --dir ~/kitware/autopybind11
-
-export APB=~/kitware/autopybind11
