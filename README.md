@@ -32,4 +32,4 @@ Essentially the notebook provides a sandbox in which you can run AutoPyBind11 ov
 
 The binder instance can be accessed via the badge below.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/johnwparent/APBPoster.git/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Kitware/APBPoster.git/master)
