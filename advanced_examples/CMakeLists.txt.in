@@ -1,14 +1,13 @@
 cmake_minimum_required(VERSION 3.15)
-
-list(APPEND CMAKE_PREFIX_PATH $ENV{APB})
-
 project(@UP_NAME@ CXX)
+
+include("${CMAKE_SOURCE_DIR}/../../CMake/GetAutoPybind11.cmake")
+
 find_package(AutoPyBind11)
-autopybind_fetch_build_pybind11(PYBIND11_DIR ${PYBIND11_DIR})
 
 add_library(@MOD_NAME@ INTERFACE)
 target_include_directories(@MOD_NAME@ INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
-target_add_sources(@MOD_NAME@ INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/@MOD_NAME@.hpp)
+target_sources(@MOD_NAME@ INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/@MOD_NAME@.hpp)
 
 
 autopybind11_add_module(@MOD_NAME@MOD
