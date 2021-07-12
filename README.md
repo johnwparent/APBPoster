@@ -9,7 +9,7 @@ Welcome to the repository hosting the 2021 SciPyCon poster for [AutoPyBind11](ht
 
 #### RTD
 
-This poster is comprised of two components, a [read the docs instance](https://autopybind11.readthedocs.io/en/latest/?) and a binder instance. The RTD is compirsed of all extant documentation for AutoPyBind11, installation instructions, and a walkthrough on general useage.
+This poster is comprised of two components, a [read the docs instance](https://autopybind11.readthedocs.io/en/latest/?) and a binder instance. The RTD is comprised of all extant documentation for AutoPyBind11, installation instructions, and a walkthrough on general useage.
 
 #### Binder
 
@@ -32,4 +32,4 @@ Essentially the notebook provides a sandbox in which you can run AutoPyBind11 ov
 
 The binder instance can be accessed via the badge below.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/johnwparent/APBPoster.git/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Kitware/APBPoster.git/master)
