@@ -8,10 +8,10 @@ cpp_md = """```cpp\n{}\n```\n<hr>"""
 def render(code_dir):
     with open(code_dir, 'r') as code_file:
         code = code_file.readlines()
-        print(code)
+        code = "".join([str(c) for c in code])
         cpp_file_name = os.path.basename(code_dir)
-        print("Binding Code File: %s" % cpp_file_name)
         display_markdown(Markdown(cpp_md.format(code)))
+        print("Binding Code File: %s" % cpp_file_name)
 
 
 def main():
