@@ -5,7 +5,7 @@ import yaml
 def generate_descriptors(wrapper, config):
     if not wrapper:
         raise RuntimeError("Wrapper is not populated")
-    with open("sample_wrapper.yaml","w") as wrapper_yml:
+    with open("sample_wrapper.yml","w") as wrapper_yml:
         yaml.dump(yaml.load(wrapper),wrapper_yml)
     if not config:
         return
