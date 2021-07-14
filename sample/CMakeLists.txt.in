@@ -11,7 +11,7 @@ find_package(AutoPyBind11 REQUIRED)
 autopybind11_add_module(@MOD_NAME@
                        YAML_INPUT ${CMAKE_SOURCE_DIR}/@YAML_IN@
                        CONFIG_INPUT ${CMAKE_SOURCE_DIR}/@CONFIG@
-                       DESTINATION @DEST@
+                       DESTINATION ${CMAKE_CURRENT_BINARY_DIR}
                        LINK_LIBRARIES @LINK_LIBRARIES@
                        @EXTRA@
                     )
