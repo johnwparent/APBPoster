@@ -10,7 +10,7 @@ Installing via Python
 
 AutoPyBind11 can be easily installed from TestPyPi via pip with the command
 
-..code_block:: shell
+.. code-block:: shell
 
     pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple autopybind11
 
@@ -56,7 +56,8 @@ This approach, while straightforward and fine for inidivual projects/one off use
 AutoPyBind11 CMake, AutoPyBind11's CMake files need to be copied to a filesystem location that CMake consistenly searches for packages to load. This can vary per system and per user setup.
 To determine these locations for a give system, refer to the CMake docs. AutoPyBind11 provides a convenience feature to help with this. On install via Python, a console script is created that can be run to
 install the CMake files. It can be executed by
-..code-block:: python
+
+.. code-block:: python
 
     autopybind11-cmake --dir <path to install>
 
